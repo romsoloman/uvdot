@@ -1,0 +1,23 @@
+{
+  "companyAddress": "החילזון 6, רמת גן",
+  "companyPhone": "טל: 074-7600888",
+  "companyCountries": "Israel - US - Brazil - Germany",
+  "pages": {
+    "title": "עמודים",
+    "siteMap": "מפת האתר",
+    "contact": "צור קשר",
+    "login": "התחברות",
+    "logout": "התנתק"
+  },
+  "more": {
+    "title": "עוד",
+    "ethicTerms": "אתיקה ובוררות",
+    "privacyPolicy": "פרטיות",
+    "termsAndConditions": "תנאים",
+    "copyRights": "פרופדו MLS 2022 ©"
+  },
+  "propdoMLS": {
+    "title": "פרופדו MLS - שיתופי פעולה לנכסים בבלעדיות",
+    "subtitle": "אתר פרופדו MLS נבנה על ידי לשכת המתווכים הארצית וחברת פרופדו.האתר נועד להרחיב את שיתופי הפעולה המבוצעים על ידי מתווכים בשטח.פרטים נוספים פנו בטופס צור קשר או לחילופין לכתובת MLS@propdo.com."
+  }
+}

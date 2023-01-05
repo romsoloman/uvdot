@@ -1,0 +1,22 @@
+{
+  "unknown": "*שגיאה לא ידועה",
+  "codeExpired": "*פג תוקף הקוד",
+  "wrongCode": "*אנא הזן קוד תקין בעל 6 ספרות",
+  "invalidPhone": "*אנא הזן מספר פלאפון תקין",
+  "userNotFound": "*משתמש לא נמצא",
+  "userExists": "*מספר טלפון קיים במערכת",
+  "licenseExists": "*מספר רישיון קיים במערכת",
+  "chambersMemberNotFound": "לא נמצא חבר לשכה עם רישיון זה",
+  "invalidName": "*אנא הזן שם תקין",
+  "invalidEmail": "*אנא הזן דוא\"ל תקין",
+  "invalidRoomsNumber": "מקסימום 12.5 חדרים",
+  "invalidRealtorId": "*אנא הזן תקין מספר רישיון תקין",
+  "realtorIdNotExists": "*מספר רישיון לא קיים",
+  "required": "*חובה",
+  "imageUploadError": "שגיאה בהעלאת התמונה",
+  "404": "404 - היי, נראה שעמוד שחיפשת אינו קיים",
+  "backToHomepage": "חזרה לדף הבית",
+  "noMatchesFound": "לא נמצאו מאצ׳ים",
+  "largeFile": "גודל הקבצים המותר הוא עד 4MB",
+  "maxImages": "מספר התמונות שניתן להעלות הוא עד 15"
+}

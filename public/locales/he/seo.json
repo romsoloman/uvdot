@@ -1,0 +1,15 @@
+{
+  "login": "התחברות",
+  "signUp": "הרשמה",
+  "siteName": "פרופדו MLS",
+  "defaultTitle": "דירות למכירה | פרופדו MLS",
+  "defaultDescription": "דירות למכירה. היכנסו לאתר פרופדו MLS, וצפו במודעות לדירות חדשות ויד שניה למכירה בבלעדיות.",
+  "listings": {
+    "titleWithLocation": "דירות למכירה ב-{{- address}} | פרופדו MLS",
+    "descriptionWithLocation": "דירות למכירה ב-{{- address}} | פרופדו MLS. וצפו במודעות לדירות חדשות ויד שניה למכירה בבלעדיות."
+  },
+  "listing": {
+    "titleWithLocation": "דירה למכירה ב- {{- listing.address.formattedAddress}} | פרופדו MLS",
+    "descriptionWithLocation": "דירה למכירה ב-{{- listing.address.formattedAddress}} | פרופדו MLS. וצפו במודעות לדירה חדשה ויד שניה למכירה בבלעדיות."
+  }
+}
