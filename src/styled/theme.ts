@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material/styles";
 import { blue, grey } from "@mui/material/colors";
 
 const theme = createTheme({
+  direction: "rtl",
   typography: {
     h1: { fontSize: "56px" },
     h2: { fontSize: "24px" },

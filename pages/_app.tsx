@@ -24,8 +24,6 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
-  const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <CacheProvider value={emotionCache}>
       <Head>
