@@ -42,7 +42,7 @@ export default function Header() {
             </Typography>
           </Typography>
           <Container maxWidth="sm">
-            <Typography variant="h2" color="common.black" paragraph={true}>
+            <Typography variant="h4" color="common.black" paragraph={true}>
               {content["description"]}
             </Typography>
           </Container>

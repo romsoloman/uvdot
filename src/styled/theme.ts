@@ -5,11 +5,13 @@ const theme = createTheme({
   direction: "rtl",
   typography: {
     h1: { fontSize: "56px" },
-    h2: { fontSize: "24px" },
-    h3: { fontSize: "20px" },
-    h4: { fontSize: "18px" },
-    h5: { fontSize: "16px" },
+    h2: { fontSize: "38px" },
+    h3: { fontSize: "28px" },
+    h4: { fontSize: "24px" },
+    h5: { fontSize: "20px" },
     h6: { fontSize: "14px" },
+    subtitle1: { fontSize: "18px" },
+    subtitle2: { fontSize: "16px" },
   },
   palette: {
     primary: {
@@ -20,6 +22,7 @@ const theme = createTheme({
     },
     background: {
       default: grey[100],
+      paper: "#fff",
     },
   },
 });

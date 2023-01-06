@@ -113,7 +113,7 @@ const Appbar = () => {
                   display: "block",
                 }}
               >
-                <Typography variant="h4">{page}</Typography>
+                <Typography variant="subtitle1">{page}</Typography>
               </Button>
             ))}
           </Box>
