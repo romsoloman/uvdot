@@ -8,13 +8,21 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import i18n from "../../i18";
+import Image from "next/image";
+import logo from "../../public/assets/images/appbar/logo.png";
+import { useTranslation } from "react-i18next";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = [
+  i18n.t("about", { ns: "appbar" }),
+  i18n.t("stories", { ns: "appbar" }),
+  i18n.t("contact", { ns: "appbar" }),
+];
 
 const Appbar = () => {
+  const { t } = useTranslation("appbar");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -31,23 +39,13 @@ const Appbar = () => {
     <AppBar position="fixed" color="transparent" sx={{ boxShadow: "none" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
+          <Box
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "white",
-              textDecoration: "none",
-            }}
           >
-            LOGO
-          </Typography>
+            <Image src={logo} height={60} width={90} alt={t("logo")} />
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -87,7 +85,7 @@ const Appbar = () => {
           </Box>
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
-            variant="h5"
+            variant="h4"
             noWrap
             component="a"
             href=""
@@ -109,9 +107,13 @@ const Appbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: (theme) => theme.palette.common.black,
+                  display: "block",
+                }}
               >
-                {page}
+                <Typography variant="h4">{page}</Typography>
               </Button>
             ))}
           </Box>

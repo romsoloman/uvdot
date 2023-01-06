@@ -1,13 +1,13 @@
 import { Box, Button, Container, styled, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import background from "../../public/assets/images/Header/background-2.jpg";
+import background from "../../public/assets/images/header/background-3.jpg";
 
 const Section = styled("section")(({ theme }) => ({
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   filter: "grayscale(0.7)",
-  backgroundColor: theme.palette.primary.main,
+  backgroundColor: theme.palette.background.default,
   paddingTop: theme.spacing(12),
   paddingBottom: theme.spacing(12),
   [theme.breakpoints.up("md")]: {
@@ -29,23 +29,20 @@ export default function Header() {
   };
 
   return (
-    <Section style={{ backgroundImage: `url("${content["pattern"]}")` }}>
+    <Section style={{}}>
+      {/*  backgroundImage: `url("${content["pattern"]}")` */}
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
-          <Typography variant="h2" component="h2" gutterBottom={true}>
-            <Typography color="secondary" variant="h2" component="span">
+          <Typography variant="h1" component="h1" gutterBottom={true}>
+            <Typography color="common.black" variant="h1" component="span">
               {content["header-p1"]}
             </Typography>
-            <Typography variant="h2" component="span">
+            <Typography variant="h1" component="span" color="common.black">
               {content["header-p2"]}
             </Typography>
           </Typography>
           <Container maxWidth="sm">
-            <Typography
-              variant="subtitle1"
-              color="common.white"
-              paragraph={true}
-            >
+            <Typography variant="h2" color="common.black" paragraph={true}>
               {content["description"]}
             </Typography>
           </Container>
