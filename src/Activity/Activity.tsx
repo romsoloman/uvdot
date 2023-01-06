@@ -49,7 +49,7 @@ export const Activity = () => {
       <Box textAlign="center" color="common.white">
         <Typography
           color="common.black"
-          variant="h3"
+          variant="h2"
           fontWeight={700}
           gutterBottom={true}
         >

@@ -1,5 +1,8 @@
 {
   "currency": "₪",
+  "contact": {
+    "title": "צור קשר"
+  },
   "buttons": {
     "submit": "שלח",
     "continue": "המשך",
@@ -15,13 +18,11 @@
     "choose": "בחר"
   },
   "form": {
-    "firstName": "שם פרטי",
-    "lastName": "שם משפחה",
-    "fullName": "שם מלא",
+    "name": "שם מלא",
     "phone": "טלפון",
     "email": "דוא\"ל",
     "address": "כתובת",
-    "note": "הערות",
+    "message": "הודעה",
     "cleanAll": "נקה הכל"
   },
   "contactSuccessfully": "פנייתך התקבלה בהצלחה",
