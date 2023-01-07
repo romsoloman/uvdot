@@ -5,6 +5,7 @@ import { Activity } from "../src/Activity/Activity";
 import { Contact } from "../src/Contact/Contact";
 import { Stats } from "../src/Stats/Stats";
 import { General } from "../src/General/General";
+import { About } from "../src/About/About";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <Activity />
       <Stats />
       <General />
+      <About />
       <Contact />
     </React.Fragment>
   );

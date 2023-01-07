@@ -29,8 +29,11 @@ export default function Header() {
   };
 
   return (
-    <Section style={{}}>
-      {/*  backgroundImage: `url("${content["pattern"]}")` */}
+    <Section
+      style={{
+        backgroundImage: `url("${content["pattern"]}")`,
+      }}
+    >
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
           <Typography variant="h1" component="h1" gutterBottom={true}>

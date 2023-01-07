@@ -8,7 +8,7 @@ import check from "../../public/assets/icons/general/check.svg";
 
 export const General = () => {
   return (
-    <StyledWrapper sx={{ backgroundColor: theme.palette.background.paper }}>
+    <StyledWrapper sx={{ backgroundColor: theme.palette.background.default }}>
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between">
           <Grid container item md={4} maxHeight={100}>

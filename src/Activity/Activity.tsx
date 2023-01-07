@@ -2,6 +2,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { ActivityCard } from "../interfaces/activty.interface";
 import { StyledWrapper } from "../styled/StyledWrapper";
+import theme from "../styled/theme";
 import { ActivityItem } from "./ActivityItem";
 
 const activities: ActivityCard[] = [
@@ -45,7 +46,7 @@ export const Activity = () => {
     "primary-action": "Action",
   };
   return (
-    <StyledWrapper>
+    <StyledWrapper sx={{ bgcolor: theme.palette.background.default }}>
       <Box textAlign="center" color="common.white">
         <Typography
           color="common.black"

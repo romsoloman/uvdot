@@ -26,7 +26,7 @@ const stats: StatCard[] = [
 
 export const Stats = () => {
   return (
-    <StyledWrapper sx={{ backgroundColor: theme.palette.background.default }}>
+    <StyledWrapper>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           {stats.map((stat, idx) => {
