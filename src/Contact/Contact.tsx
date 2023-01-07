@@ -6,6 +6,7 @@ import { Input } from "../Input/Input";
 import { ContactForm } from "../interfaces/contact.interface";
 import { StyledWrapper } from "../styled/StyledWrapper";
 import theme from "../styled/theme";
+import Map, { Popup } from "react-map-gl";
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -19,8 +20,8 @@ export const Contact = () => {
         {t("contact.title")}
       </Typography>
       <Container maxWidth="lg">
-        <Grid container mt={10}>
-          <Grid item md={5}>
+        <Grid container mt={10} justifyContent="space-between">
+          <Grid container alignItems="center" item md={5}>
             <FormProvider {...methods}>
               <form onSubmit={onSubmit}>
                 <Grid container spacing={2}>
@@ -52,7 +53,26 @@ export const Contact = () => {
             </FormProvider>
           </Grid>
           <Grid item md={5}>
-            {/* MAP - with office location */}
+            <Map
+              initialViewState={{
+                longitude: 34.85931290909617,
+                latitude: 32.023260883925346,
+                zoom: 13.5,
+              }}
+              style={{ width: "100%", height: "500px" }}
+              mapStyle="mapbox://styles/shimon123/clclzvevc00nx14s1sdsfi8i4"
+              mapboxAccessToken="pk.eyJ1Ijoic2hpbW9uMTIzIiwiYSI6ImNrcWc5bDRucjBoNmcydW9leXgxaTY5MG0ifQ.cyhkIjRQq_M9KkkYQUOrHg"
+              attributionControl={false}
+            >
+              <Popup
+                longitude={34.85931290909617}
+                latitude={32.023260883925346}
+                anchor="bottom"
+                closeButton={false}
+              >
+                <Typography>אנחנו כאן!</Typography>
+              </Popup>
+            </Map>
           </Grid>
         </Grid>
       </Container>

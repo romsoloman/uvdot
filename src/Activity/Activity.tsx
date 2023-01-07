@@ -45,9 +45,7 @@ export const Activity = () => {
     "primary-action": "Action",
   };
   return (
-    <StyledWrapper
-      sx={{ backgroundColor: (theme) => theme.palette.background.default }}
-    >
+    <StyledWrapper>
       <Box textAlign="center" color="common.white">
         <Typography
           color="common.black"

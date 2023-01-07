@@ -9,6 +9,7 @@ import theme from "../src/styled/theme";
 import { NextPage } from "next";
 import Layout from "../src/Layout/Layout";
 import "../i18";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

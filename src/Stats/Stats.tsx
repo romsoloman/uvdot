@@ -2,6 +2,7 @@ import { Container, Grid } from "@mui/material";
 import React from "react";
 import { StatCard } from "../interfaces/stats.interface";
 import { StyledWrapper } from "../styled/StyledWrapper";
+import theme from "../styled/theme";
 import { StatItem } from "./StatItem";
 
 const stats: StatCard[] = [
@@ -25,7 +26,7 @@ const stats: StatCard[] = [
 
 export const Stats = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper sx={{ backgroundColor: theme.palette.background.default }}>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
           {stats.map((stat, idx) => {
