@@ -19,11 +19,15 @@ import telephone from "../../public/assets/icons/contact/telephone.svg";
 import email from "../../public/assets/icons/contact/mail.svg";
 import pin from "../../public/assets/icons/contact/pin.svg";
 import Image from "next/image";
+import { MAPBOX_API_KEY } from "../../env";
+import firebase from "../../firebase/clientApp";
 
 export const Contact = () => {
+  const db = firebase.firestore();
   const { t } = useTranslation();
   const methods = useForm<ContactForm>();
   const onSubmit = methods.handleSubmit((data) => console.log(data));
+
   return (
     <StyledWrapper
       sx={{ bgcolor: (theme) => theme.palette.background.default }}
@@ -73,7 +77,7 @@ export const Contact = () => {
               }}
               style={{ width: "100%", height: "500px" }}
               mapStyle="mapbox://styles/shimon123/clclzvevc00nx14s1sdsfi8i4"
-              mapboxAccessToken="pk.eyJ1Ijoic2hpbW9uMTIzIiwiYSI6ImNrcWc5bDRucjBoNmcydW9leXgxaTY5MG0ifQ.cyhkIjRQq_M9KkkYQUOrHg"
+              mapboxAccessToken={MAPBOX_API_KEY}
               attributionControl={false}
             >
               <Popup
@@ -125,3 +129,6 @@ export const Contact = () => {
     </StyledWrapper>
   );
 };
+function firebaseApp(firebaseApp: any): any {
+  throw new Error("Function not implemented.");
+}
