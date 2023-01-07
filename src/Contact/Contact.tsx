@@ -1,4 +1,12 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Paper,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -7,6 +15,10 @@ import { ContactForm } from "../interfaces/contact.interface";
 import { StyledWrapper } from "../styled/StyledWrapper";
 import theme from "../styled/theme";
 import Map, { Popup } from "react-map-gl";
+import telephone from "../../public/assets/icons/contact/telephone.svg";
+import email from "../../public/assets/icons/contact/mail.svg";
+import pin from "../../public/assets/icons/contact/pin.svg";
+import Image from "next/image";
 
 export const Contact = () => {
   const { t } = useTranslation();
@@ -69,8 +81,42 @@ export const Contact = () => {
                 latitude={32.023260883925346}
                 anchor="bottom"
                 closeButton={false}
+                maxWidth={"300px"}
               >
-                <Typography>אנחנו כאן!</Typography>
+                <Box width={280}>
+                  <Typography
+                    component="h5"
+                    variant="h5"
+                    fontWeight={800}
+                    mb={2}
+                  >
+                    {t("title")}
+                  </Typography>
+                  <Divider />
+                  <Box mt={2} display="flex" alignItems="center">
+                    <Image
+                      src={telephone}
+                      alt="telephone"
+                      width={15}
+                      height={15}
+                    />
+                    <Typography variant="body2" ml={2}>
+                      {t("contact.phone")}
+                    </Typography>
+                  </Box>
+                  <Box mt={2} display="flex" alignItems="center">
+                    <Image src={email} alt="email" width={15} height={15} />
+                    <Typography variant="body2" ml={2}>
+                      {t("contact.email")}
+                    </Typography>
+                  </Box>
+                  <Box mt={2} display="flex" alignItems="center">
+                    <Image src={pin} alt="pin" width={15} height={15} />
+                    <Typography variant="body2" ml={2}>
+                      {t("contact.address")}
+                    </Typography>
+                  </Box>
+                </Box>
               </Popup>
             </Map>
           </Grid>
