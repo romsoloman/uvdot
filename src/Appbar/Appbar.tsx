@@ -11,20 +11,22 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import i18n from "../../i18";
-import Image from "next/image";
-import logo from "../../public/assets/images/appbar/logo.png";
 import { useTranslation } from "react-i18next";
 import Logo from "../Logo/Logo";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import theme from "../styled/theme";
 
 // TODO: put in constants
 export const PAGES = [
   i18n.t("about", { ns: "appbar" }),
-  i18n.t("stories", { ns: "appbar" }),
+  // i18n.t("stories", { ns: "appbar" }),
   i18n.t("contact", { ns: "appbar" }),
 ];
 
 const Appbar = () => {
   const { t } = useTranslation("appbar");
+  const trigger = useScrollTrigger();
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -38,7 +40,14 @@ const Appbar = () => {
   };
 
   return (
-    <AppBar position="fixed" color="transparent" sx={{ boxShadow: "none" }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        // boxShadow: "none",
+        backgroundColor: theme.palette.common.white,
+        zIndex: 9999,
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box

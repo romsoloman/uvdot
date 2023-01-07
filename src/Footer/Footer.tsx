@@ -26,7 +26,7 @@ export const Footer = () => {
         sx={{ my: (theme) => theme.spacing(4) }}
       >
         <Grid item md={6}>
-          <Box display="flex" alignItems="center" sx={{ maxWidth: 150 }}>
+          <Box display="flex" alignItems="center" sx={{ maxWidth: 300 }}>
             <Logo />
             <Typography variant="h5" sx={{ ml: 2 }}>
               {t("title")}

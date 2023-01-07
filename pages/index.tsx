@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Header />
       <Stats />
       <Activity />
-      {/* <Contact /> */}
+      <Contact />
     </React.Fragment>
   );
 };
