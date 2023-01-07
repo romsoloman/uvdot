@@ -14,8 +14,10 @@ import i18n from "../../i18";
 import Image from "next/image";
 import logo from "../../public/assets/images/appbar/logo.png";
 import { useTranslation } from "react-i18next";
+import Logo from "../Logo/Logo";
 
-const pages = [
+// TODO: put in constants
+export const PAGES = [
   i18n.t("about", { ns: "appbar" }),
   i18n.t("stories", { ns: "appbar" }),
   i18n.t("contact", { ns: "appbar" }),
@@ -44,9 +46,8 @@ const Appbar = () => {
             component="a"
             href="/"
           >
-            <Image src={logo} height={60} width={90} alt={t("logo")} />
+            <Logo />
           </Box>
-
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -76,7 +77,7 @@ const Appbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              {PAGES.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -103,7 +104,7 @@ const Appbar = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {PAGES.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}

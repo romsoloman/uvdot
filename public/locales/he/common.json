@@ -3,6 +3,9 @@
   "contact": {
     "title": "צור קשר"
   },
+  "footer": {
+    "reservedRights": "כל הזכויות שמורות לעובדות חקירות בע\"מ"
+  },
   "buttons": {
     "submit": "שלח",
     "continue": "המשך",
