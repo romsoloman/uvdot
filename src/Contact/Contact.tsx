@@ -31,6 +31,7 @@ export const Contact = () => {
   return (
     <StyledWrapper
       sx={{ bgcolor: (theme) => theme.palette.background.default }}
+      id="contact"
     >
       <Typography variant="h2" textAlign="center">
         {t("contact.title")}

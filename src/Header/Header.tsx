@@ -17,14 +17,13 @@ const Section = styled("section")(({ theme }) => ({
 }));
 
 export default function Header() {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const content = {
     "header-p1": "Lorem ipsum dolor",
     "header-p2": "sit amet, consectetur adipiscing elit.",
     description:
       "Suspendisse aliquam tellus ante, porttitor mattis diam eleifend quis. Pellentesque pulvinar commodo eros sit amet finibus.",
-    "primary-action": "Action",
-    "secondary-action": "Action",
+    "primary-action": t("contact.title"),
     pattern: background.src,
   };
 
@@ -37,15 +36,15 @@ export default function Header() {
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
           <Typography variant="h1" component="h1" gutterBottom={true}>
-            <Typography color="common.black" variant="h1" component="span">
+            <Typography color="common.white" variant="h1" component="span">
               {content["header-p1"]}
             </Typography>
-            <Typography variant="h1" component="span" color="common.black">
+            <Typography variant="h1" component="span" color="common.white">
               {content["header-p2"]}
             </Typography>
           </Typography>
           <Container maxWidth="sm">
-            <Typography variant="h4" color="common.black" paragraph={true}>
+            <Typography variant="h4" color="common.white" paragraph={true}>
               {content["description"]}
             </Typography>
           </Container>

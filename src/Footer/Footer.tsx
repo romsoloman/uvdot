@@ -7,6 +7,7 @@ import Logo from "../Logo/Logo";
 import telephone from "../../public/assets/icons/contact/telephone.svg";
 import email from "../../public/assets/icons/contact/mail.svg";
 import pin from "../../public/assets/icons/contact/pin.svg";
+import { Link } from "react-scroll";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -33,14 +34,25 @@ export const Footer = () => {
         <Grid container justifyContent="flex-end" item md={6}>
           {PAGES.map((page) => (
             <Button
-              key={page}
+              key={page.to}
               sx={{
                 ml: 3,
                 color: (theme) => theme.palette.common.black,
                 display: "block",
               }}
             >
-              <Typography variant="subtitle1">{page}</Typography>
+              <Link
+                activeClass="active"
+                to={page.to}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                <Typography textAlign="center" variant="subtitle1">
+                  {page.label}
+                </Typography>
+              </Link>
             </Button>
           ))}
         </Grid>

@@ -7,7 +7,7 @@ import { StyledWrapper } from "../styled/StyledWrapper";
 export const About = () => {
   const { t } = useTranslation("");
   return (
-    <StyledWrapper>
+    <StyledWrapper id="about">
       <Container maxWidth="lg">
         <Typography component="h2" variant="h2" gutterBottom textAlign="center">
           {t("about.title")}

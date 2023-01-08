@@ -15,12 +15,13 @@ import { useTranslation } from "react-i18next";
 import Logo from "../Logo/Logo";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import theme from "../styled/theme";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // TODO: put in constants
 export const PAGES = [
-  i18n.t("about", { ns: "appbar" }),
+  { label: i18n.t("about", { ns: "appbar" }), to: "about" },
   // i18n.t("stories", { ns: "appbar" }),
-  i18n.t("contact", { ns: "appbar" }),
+  { label: i18n.t("contact", { ns: "appbar" }), to: "contact" },
 ];
 
 const Appbar = () => {
@@ -87,8 +88,17 @@ const Appbar = () => {
               }}
             >
               {PAGES.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.to} onClick={handleCloseNavMenu}>
+                  <Link
+                    activeClass="active"
+                    to={page.to}
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                  >
+                    <Typography textAlign="center">{page.label}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -115,7 +125,7 @@ const Appbar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {PAGES.map((page) => (
               <Button
-                key={page}
+                key={page.to}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
@@ -123,7 +133,18 @@ const Appbar = () => {
                   display: "block",
                 }}
               >
-                <Typography variant="subtitle1">{page}</Typography>
+                <Link
+                  activeClass="active"
+                  to={page.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  <Typography textAlign="center" variant="subtitle1">
+                    {page.label}
+                  </Typography>
+                </Link>
               </Button>
             ))}
           </Box>
