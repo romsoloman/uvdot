@@ -8,8 +8,8 @@ export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
   return (
     <Box
       sx={{
-        height: 100,
-        width: 300,
+        height: 150,
+        width: 320,
         display: "flex",
       }}
     >
@@ -20,11 +20,12 @@ export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
           color="common.black"
           fontWeight={"bold"}
           mb={1}
+          textAlign="left"
         >
-          Lorem ipsum dolor sit amet,
+          {title}
         </Typography>
-        <Typography variant="body2" color="common.black">
-          Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, Lorem ipsum
+        <Typography variant="body2" color="common.black" textAlign="left">
+          {subtitle}
         </Typography>
       </Box>
     </Box>

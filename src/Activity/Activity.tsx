@@ -1,5 +1,7 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18";
 import { ActivityCard } from "../interfaces/activty.interface";
 import { StyledWrapper } from "../styled/StyledWrapper";
 import theme from "../styled/theme";
@@ -8,41 +10,41 @@ import { ActivityItem } from "./ActivityItem";
 const activities: ActivityCard[] = [
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption1"),
+    subtitle: i18n.t("activity.subtitle1"),
   },
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption2"),
+    subtitle: i18n.t("activity.subtitle2"),
   },
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption3"),
+    subtitle: i18n.t("activity.subtitle3"),
   },
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption4"),
+    subtitle: i18n.t("activity.subtitle4"),
   },
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption5"),
+    subtitle: i18n.t("activity.subtitle5"),
   },
   {
     icon: "",
-    title: "",
-    subtitle: "",
+    title: i18n.t("activity.caption6"),
+    subtitle: i18n.t("activity.subtitle6"),
   },
 ];
 
 export const Activity = () => {
+  const { t } = useTranslation();
   const content = {
-    title: "Lorem ipsum dolor",
-    subtitle:
-      "Suspendisse aliquam tellus ante, porttitor mattis diam eleifend quis. Pellentesque pamet finibus.",
+    title: t("activity.title"),
+    subtitle: "",
     "primary-action": "Action",
   };
   return (
