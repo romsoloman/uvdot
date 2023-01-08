@@ -1,15 +1,12 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { PAGES } from "../Appbar/Appbar";
 import Logo from "../Logo/Logo";
+import telephone from "../../public/assets/icons/contact/telephone.svg";
+import email from "../../public/assets/icons/contact/mail.svg";
+import pin from "../../public/assets/icons/contact/pin.svg";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -57,7 +54,25 @@ export const Footer = () => {
         <Grid item md={6}>
           <Typography>&#169; {t("footer.reservedRights")} </Typography>
         </Grid>
-        <Grid item md={6}>
+        <Grid container item md={6} justifyContent="flex-end">
+          <Box ml={2} display="flex" alignItems="center">
+            <Image src={telephone} alt="telephone" width={15} height={15} />
+            <Typography variant="body2" ml={1}>
+              {t("contact.phone")}
+            </Typography>
+          </Box>
+          <Box ml={2} display="flex" alignItems="center">
+            <Image src={email} alt="email" width={15} height={15} />
+            <Typography variant="body2" ml={1}>
+              {t("contact.email")}
+            </Typography>
+          </Box>
+          <Box ml={2} display="flex" alignItems="center">
+            <Image src={pin} alt="pin" width={15} height={15} />
+            <Typography variant="body2" ml={1}>
+              {t("contact.address")}
+            </Typography>
+          </Box>
           {/* TODO: add social media links */}
         </Grid>
       </Grid>

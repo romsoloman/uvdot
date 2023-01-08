@@ -1,21 +1,26 @@
 import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { StyledWrapper } from "../styled/StyledWrapper";
 
 export const About = () => {
+  const { t } = useTranslation("");
   return (
     <StyledWrapper>
       <Container maxWidth="lg">
         <Typography component="h2" variant="h2" gutterBottom textAlign="center">
-          lorem lorem
+          {t("about.title")}
         </Typography>
-        <Typography component="h5" variant="h5" textAlign="center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-          temporibus iure, eius deserunt repellendus nesciunt unde similique aut
-          pariatur asperiores dolorum aspernatur quam laudantium, expedita
-          ducimus obcaecati magnam qui magni.{" "}
-        </Typography>
+        <Container maxWidth="md">
+          <Typography component="h4" variant="h4" gutterBottom>
+            {t("about.subtitle2")}
+            {t("about.subtitle1")}
+          </Typography>
+          <Typography component="h4" variant="h4">
+            {t("about.subtitle3")}
+          </Typography>
+        </Container>
       </Container>
     </StyledWrapper>
   );
