@@ -26,7 +26,6 @@ export const PAGES = [
 
 const Appbar = () => {
   const { t } = useTranslation("appbar");
-  const trigger = useScrollTrigger();
 
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
@@ -95,7 +94,8 @@ const Appbar = () => {
                     spy={true}
                     smooth={true}
                     offset={-100}
-                    duration={500}
+                    duration={700}
+                    delay={200}
                   >
                     <Typography textAlign="center">{page.label}</Typography>
                   </Link>
@@ -124,28 +124,26 @@ const Appbar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {PAGES.map((page) => (
-              <Button
+              <Link
                 key={page.to}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: (theme) => theme.palette.common.black,
+                activeClass="active"
+                to={page.to}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={700}
+                delay={200}
+                style={{
+                  margin: "8px",
+                  color: "black",
                   display: "block",
+                  cursor: "pointer",
                 }}
               >
-                <Link
-                  activeClass="active"
-                  to={page.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                >
-                  <Typography textAlign="center" variant="subtitle1">
-                    {page.label}
-                  </Typography>
-                </Link>
-              </Button>
+                <Typography textAlign="center" variant="subtitle1">
+                  {page.label}
+                </Typography>
+              </Link>
             ))}
           </Box>
         </Toolbar>

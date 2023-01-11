@@ -21,6 +21,7 @@ import pin from "../../public/assets/icons/contact/pin.svg";
 import Image from "next/image";
 import { MAPBOX_API_KEY } from "../../env";
 import firebase from "../../firebase/clientApp";
+import Link from "next/link";
 
 export const Contact = () => {
   const db = firebase.firestore();
@@ -105,9 +106,11 @@ export const Contact = () => {
                       width={15}
                       height={15}
                     />
-                    <Typography variant="body2" ml={2}>
-                      {t("contact.phone")}
-                    </Typography>
+                    <Link href="tel:0526841616">
+                      <Typography variant="body2" ml={2}>
+                        {t("contact.phone")}
+                      </Typography>
+                    </Link>
                   </Box>
                   <Box mt={2} display="flex" alignItems="center">
                     <Image src={email} alt="email" width={15} height={15} />
@@ -130,6 +133,3 @@ export const Contact = () => {
     </StyledWrapper>
   );
 };
-function firebaseApp(firebaseApp: any): any {
-  throw new Error("Function not implemented.");
-}

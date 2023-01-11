@@ -1,5 +1,5 @@
 export interface ActivityCard {
-  icon: React.ReactNode;
+  icon: string;
   title: string;
   subtitle: string;
 }

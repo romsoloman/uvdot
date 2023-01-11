@@ -14,9 +14,11 @@ export const StatItem = ({ number, title }: StatCard) => {
       }}
     >
       <Typography variant="h1" fontWeight="bold">
-        {number}
+        + {number}
       </Typography>
-      <Typography variant="h4">{title}</Typography>
+      <Typography variant="h4" fontWeight={800} color="grey.700">
+        {title}
+      </Typography>
     </Paper>
   );
 };

@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import { ActivityCard } from "../interfaces/activty.interface";
-import exampleIcon from "../../public/assets/icons/activiy/example.svg";
 
 export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
   return (
@@ -13,10 +12,10 @@ export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
         display: "flex",
       }}
     >
-      <Image src={exampleIcon} alt="" width={50} height={50} />
+      <Image src={icon} alt="" width={50} height={50} />
       <Box ml={2}>
         <Typography
-          variant="subtitle1"
+          variant="h5"
           color="common.black"
           fontWeight={"bold"}
           mb={1}
@@ -24,7 +23,7 @@ export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
         >
           {title}
         </Typography>
-        <Typography variant="body2" color="common.black" textAlign="left">
+        <Typography variant="body2" color="grey.700" textAlign="left">
           {subtitle}
         </Typography>
       </Box>

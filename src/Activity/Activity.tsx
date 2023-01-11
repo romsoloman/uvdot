@@ -9,32 +9,32 @@ import { ActivityItem } from "./ActivityItem";
 
 const activities: ActivityCard[] = [
   {
-    icon: "",
+    icon: "/assets/icons/activiy/1.svg",
     title: i18n.t("activity.caption1"),
     subtitle: i18n.t("activity.subtitle1"),
   },
   {
-    icon: "",
+    icon: "/assets/icons/activiy/5.svg",
     title: i18n.t("activity.caption2"),
     subtitle: i18n.t("activity.subtitle2"),
   },
   {
-    icon: "",
+    icon: "/assets/icons/activiy/6.svg",
     title: i18n.t("activity.caption3"),
     subtitle: i18n.t("activity.subtitle3"),
   },
   {
-    icon: "",
+    icon: "/assets/icons/activiy/3.svg",
     title: i18n.t("activity.caption4"),
     subtitle: i18n.t("activity.subtitle4"),
   },
   {
-    icon: "",
+    icon: "/assets/icons/activiy/2.svg",
     title: i18n.t("activity.caption5"),
     subtitle: i18n.t("activity.subtitle5"),
   },
   {
-    icon: "",
+    icon: "/assets/icons/activiy/4.svg",
     title: i18n.t("activity.caption6"),
     subtitle: i18n.t("activity.subtitle6"),
   },
@@ -44,12 +44,21 @@ export const Activity = () => {
   const { t } = useTranslation();
   const content = {
     title: t("activity.title"),
-    subtitle: "",
+    headtitle: t("activity.headtitle"),
+    subtitle: t("activity.subtitle"),
     "primary-action": "Action",
   };
   return (
     <StyledWrapper sx={{ bgcolor: theme.palette.background.default }}>
       <Box textAlign="center" color="common.white">
+        <Typography
+          variant="h5"
+          fontWeight={700}
+          gutterBottom={true}
+          color="secondary.main"
+        >
+          {content["headtitle"]}
+        </Typography>
         <Typography
           color="common.black"
           variant="h2"
@@ -58,8 +67,12 @@ export const Activity = () => {
         >
           {content["title"]}
         </Typography>
-        <Container maxWidth="sm">
-          <Typography variant="h4" color="common.black" paragraph={true}>
+        <Container maxWidth="xs">
+          <Typography
+            variant="h6"
+            sx={{ color: theme.palette.grey[700] }}
+            paragraph={true}
+          >
             {content["subtitle"]}
           </Typography>
         </Container>

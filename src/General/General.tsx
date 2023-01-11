@@ -14,21 +14,33 @@ export const General = () => {
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between">
           <Grid container item md={4} maxHeight={100}>
+            <Grid item xs={12}>
+              <Typography variant="h5" fontWeight={700} color="secondary.main">
+                {t("general.headtitle")}
+              </Typography>
+            </Grid>
             <Typography fontWeight={600} variant="h2" gutterBottom>
               {t("general.title")}
             </Typography>
-            <Typography>{t("general.subtitle")}</Typography>
+            <Typography variant="h6" sx={{ color: theme.palette.grey[700] }}>
+              {t("general.subtitle")}
+            </Typography>
           </Grid>
           <Grid container item md={6}>
             <Grid item>
-              <Typography>{t("general.explanation.title")} </Typography>
+              <Typography fontWeight={600}>
+                {t("general.explanation.title")}{" "}
+              </Typography>
             </Grid>
             <Grid container spacing={2} mt={4}>
               {Array.from(Array(8), (e, i) => {
                 return (
                   <Grid key={i} item md={6} display="flex">
                     <Image src={check} alt="check" width={15} height={15} />
-                    <Typography variant="body2" sx={{ ml: 2 }}>
+                    <Typography
+                      variant="body2"
+                      sx={{ ml: 2, color: theme.palette.grey[700] }}
+                    >
                       {t(`general.explanation.caption${i + 1}`)}
                     </Typography>
                   </Grid>

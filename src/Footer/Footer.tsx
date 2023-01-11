@@ -7,7 +7,8 @@ import Logo from "../Logo/Logo";
 import telephone from "../../public/assets/icons/contact/telephone.svg";
 import email from "../../public/assets/icons/contact/mail.svg";
 import pin from "../../public/assets/icons/contact/pin.svg";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -41,18 +42,19 @@ export const Footer = () => {
                 display: "block",
               }}
             >
-              <Link
+              <ScrollLink
                 activeClass="active"
                 to={page.to}
                 spy={true}
                 smooth={true}
                 offset={-100}
-                duration={500}
+                duration={700}
+                delay={200}
               >
                 <Typography textAlign="center" variant="subtitle1">
                   {page.label}
                 </Typography>
-              </Link>
+              </ScrollLink>
             </Button>
           ))}
         </Grid>
@@ -69,9 +71,11 @@ export const Footer = () => {
         <Grid container item md={6} justifyContent="flex-end">
           <Box ml={2} display="flex" alignItems="center">
             <Image src={telephone} alt="telephone" width={15} height={15} />
-            <Typography variant="body2" ml={1}>
-              {t("contact.phone")}
-            </Typography>
+            <Link href="tel:0526841616">
+              <Typography variant="body2" ml={1}>
+                {t("contact.phone")}
+              </Typography>
+            </Link>
           </Box>
           <Box ml={2} display="flex" alignItems="center">
             <Image src={email} alt="email" width={15} height={15} />
@@ -85,7 +89,6 @@ export const Footer = () => {
               {t("contact.address")}
             </Typography>
           </Box>
-          {/* TODO: add social media links */}
         </Grid>
       </Grid>
     </Box>
