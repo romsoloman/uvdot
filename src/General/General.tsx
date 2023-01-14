@@ -13,7 +13,7 @@ export const General = () => {
     <StyledWrapper sx={{ backgroundColor: theme.palette.background.default }}>
       <Container maxWidth="lg">
         <Grid container justifyContent="space-between">
-          <Grid container item md={4} maxHeight={100}>
+          <Grid container item xs={12} md={4}>
             <Grid item xs={12}>
               <Typography variant="h5" fontWeight={700} color="secondary.main">
                 {t("general.headtitle")}
@@ -26,16 +26,16 @@ export const General = () => {
               {t("general.subtitle")}
             </Typography>
           </Grid>
-          <Grid container item md={6}>
+          <Grid container item xs={12} md={6}>
             <Grid item>
-              <Typography fontWeight={600}>
+              <Typography fontWeight={600} sx={{ mt: { xs: 4, md: 0 } }}>
                 {t("general.explanation.title")}{" "}
               </Typography>
             </Grid>
-            <Grid container spacing={2} mt={4}>
+            <Grid container spacing={2} sx={{ mt: { xs: 1, md: 4 } }}>
               {Array.from(Array(8), (e, i) => {
                 return (
-                  <Grid key={i} item md={6} display="flex">
+                  <Grid key={i} item xs={12} md={6} display="flex">
                     <Image src={check} alt="check" width={15} height={15} />
                     <Typography
                       variant="body2"
