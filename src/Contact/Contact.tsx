@@ -21,13 +21,23 @@ import pin from "../../public/assets/icons/contact/pin.svg";
 import Image from "next/image";
 import { MAPBOX_API_KEY } from "../../env";
 import firebase from "../../firebase/clientApp";
-import Link from "next/link";
 
 export const Contact = () => {
   const db = firebase.firestore();
   const { t } = useTranslation();
   const methods = useForm<ContactForm>();
-  const onSubmit = methods.handleSubmit((data) => console.log(data));
+
+  const onSubmit = (data: ContactForm) => {
+    db.collection("leads")
+      .doc(data.name)
+      .set({ ...data });
+    // firebase.functions().httpsCallable("sendSMS")({
+    //   phoneNumber: "+972526841616",
+    //   message: data.message,
+    //   fromNumber: data.phone,
+    // });
+    methods.reset();
+  };
 
   return (
     <StyledWrapper
@@ -48,7 +58,7 @@ export const Contact = () => {
               {t("contact.title")}
             </Typography>
             <FormProvider {...methods}>
-              <form onSubmit={onSubmit}>
+              <form onSubmit={methods.handleSubmit(onSubmit)}>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
                     <Input name="name" />
@@ -76,6 +86,7 @@ export const Contact = () => {
                         },
                       }}
                       variant="contained"
+                      type="submit"
                     >
                       {t("buttons.submit")}
                     </Button>
