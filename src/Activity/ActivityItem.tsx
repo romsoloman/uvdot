@@ -8,7 +8,7 @@ export const ActivityItem = ({ icon, title, subtitle }: ActivityCard) => {
     <Box
       sx={{
         height: 150,
-        width: 320,
+        width: { xs: "100%", md: 320 },
         display: "flex",
       }}
     >
