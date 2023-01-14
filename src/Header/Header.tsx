@@ -3,7 +3,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import theme from "../styled/theme";
-import backgroundImage from "public/assets/images/header/background-1.jpg";
 
 const Section = styled("section")(({ theme }) => ({
   backgroundRepeat: "no-repeat",
@@ -25,13 +24,12 @@ export default function Header() {
     "header-p2": t("header.subtitle"),
     description: t("header.description"),
     "primary-action": t("contact.title"),
-    pattern: backgroundImage.src,
   };
 
   return (
     <Section
       style={{
-        backgroundImage: `url("${content["pattern"]}")`,
+        backgroundImage: `url("/assets/images/header/background-1.jpg")`,
       }}
     >
       <Container maxWidth="md">
