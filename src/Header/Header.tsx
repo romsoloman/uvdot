@@ -1,7 +1,6 @@
 import { Box, Button, Container, styled, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import background from "../../public/assets/images/header/background-3.jpg";
 
 const Section = styled("section")(({ theme }) => ({
   backgroundRepeat: "no-repeat",
@@ -24,7 +23,7 @@ export default function Header() {
     description:
       "Suspendisse aliquam tellus ante, porttitor mattis diam eleifend quis. Pellentesque pulvinar commodo eros sit amet finibus.",
     "primary-action": t("contact.title"),
-    pattern: background.src,
+    pattern: "",
   };
 
   return (
