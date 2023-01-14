@@ -34,12 +34,12 @@ export const Contact = () => {
       sx={{ bgcolor: (theme) => theme.palette.background.default }}
       id="contact"
     >
-      <Typography variant="h2" textAlign="center">
-        {t("contact.title")}
-      </Typography>
       <Container maxWidth="lg">
         <Grid container mt={10} justifyContent="space-between">
           <Grid container alignItems="center" item md={5}>
+            <Typography variant="h2" gutterBottom fontWeight={800}>
+              {t("contact.title")}
+            </Typography>
             <FormProvider {...methods}>
               <form onSubmit={onSubmit}>
                 <Grid container spacing={2}>
