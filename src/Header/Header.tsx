@@ -3,28 +3,29 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import theme from "../styled/theme";
+import backgroundImage from "public/assets/images/header/background-1.jpg";
 
 const Section = styled("section")(({ theme }) => ({
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
+  filter: "grayscale(0.8)",
   backgroundColor: theme.palette.background.default,
   paddingTop: theme.spacing(12),
   paddingBottom: theme.spacing(12),
   [theme.breakpoints.up("md")]: {
-    paddingTop: theme.spacing(27),
-    paddingBottom: theme.spacing(27),
+    paddingTop: theme.spacing(37),
+    paddingBottom: theme.spacing(37),
   },
 }));
 
 export default function Header() {
   const { t } = useTranslation();
   const content = {
-    "header-p1": "Lorem ipsum dolor",
-    "header-p2": "sit amet, consectetur adipiscing elit.",
-    description:
-      "Suspendisse aliquam tellus ante, porttitor mattis diam eleifend quis. Pellentesque pulvinar commodo eros sit amet finibus.",
+    "header-p1": t("header.title"),
+    "header-p2": t("header.subtitle"),
+    description: t("header.description"),
     "primary-action": t("contact.title"),
-    pattern: "",
+    pattern: backgroundImage.src,
   };
 
   return (
@@ -34,18 +35,20 @@ export default function Header() {
       }}
     >
       <Container maxWidth="md">
-        <Box textAlign="center" color="common.black">
+        <Box textAlign="center" color="common.white">
           <Typography variant="h1" component="h1" gutterBottom={true}>
-            <Typography color="common.black" variant="h1" component="span">
+            <Typography
+              color="common.white"
+              variant="h1"
+              fontWeight={800}
+              component="span"
+            >
               {content["header-p1"]}
-            </Typography>
-            <Typography variant="h1" component="span" color="common.black">
-              {content["header-p2"]}
             </Typography>
           </Typography>
           <Container maxWidth="sm">
-            <Typography variant="h4" color="common.black" paragraph={true}>
-              {content["description"]}
+            <Typography variant="h4" color="common.white" paragraph={true}>
+              {/* {content["description"]} */}
             </Typography>
           </Container>
           <Box mt={3}>
@@ -62,11 +65,11 @@ export default function Header() {
               <Button
                 sx={{
                   width: 220,
-                  backgroundColor: theme.palette.common.black,
-                  color: theme.palette.common.white,
+                  backgroundColor: theme.palette.common.white,
+                  color: theme.palette.common.black,
                   "&:hover": {
-                    backgroundColor: theme.palette.common.white,
-                    color: theme.palette.common.black,
+                    backgroundColor: theme.palette.common.black,
+                    color: theme.palette.common.white,
                   },
                 }}
                 variant="contained"

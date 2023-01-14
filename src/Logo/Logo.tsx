@@ -5,5 +5,5 @@ import logo from "../../public/assets/images/appbar/logo.png";
 
 export default function Logo({}) {
   const { t } = useTranslation("appbar");
-  return <Image src={logo} height={60} width={90} alt={t("logo")} />;
+  return <Image src={logo} height={65} width={90} alt={t("logo")} />;
 }

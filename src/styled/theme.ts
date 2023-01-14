@@ -21,7 +21,7 @@ const theme = createTheme({
       main: "#ff6666",
     },
     background: {
-      default: grey[100],
+      default: grey[300],
       paper: "#fff",
     },
   },

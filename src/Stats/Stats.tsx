@@ -32,7 +32,7 @@ export const Stats = () => {
         <Grid container spacing={2}>
           {stats.map((stat, idx) => {
             return (
-              <Grid key={idx} item md={3}>
+              <Grid key={idx} item xs={12} sm={6} md={3}>
                 <StatItem {...stat} />
               </Grid>
             );

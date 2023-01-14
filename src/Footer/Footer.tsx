@@ -27,7 +27,7 @@ export const Footer = () => {
         justifyContent="space-between"
         sx={{ my: (theme) => theme.spacing(4) }}
       >
-        <Grid item xs={6} md={6}>
+        <Grid item xs={12} md={6}>
           <Box display="flex" alignItems="center" sx={{ maxWidth: 300 }}>
             <Logo />
             <Typography variant="h5" sx={{ ml: 2, whiteSpace: "nowrap" }}>
@@ -35,7 +35,13 @@ export const Footer = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid container justifyContent={"flex-end"} item xs={6} md={6}>
+        <Grid
+          container
+          justifyContent={{ xs: "flex-start", md: "flex-end" }}
+          item
+          xs={6}
+          md={6}
+        >
           {PAGES.map((page) => (
             <Button
               key={page.to}

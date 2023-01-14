@@ -7,9 +7,7 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import i18n from "../../i18";
 import { useTranslation } from "react-i18next";
 import Logo from "../Logo/Logo";
@@ -42,8 +40,9 @@ const Appbar = () => {
   return (
     <AppBar
       position="fixed"
+      // color="transparent"
       sx={{
-        // boxShadow: "none",
+        boxShadow: "none",
         backgroundColor: theme.palette.common.white,
         zIndex: 9999,
       }}
