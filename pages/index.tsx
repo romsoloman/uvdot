@@ -20,9 +20,9 @@ const Home: NextPage = () => {
         name={t("seo.name")}
       />
       <Header />
-      <Activity />
-      <General />
       <About />
+      <General />
+      <Activity />
       <Contact />
     </React.Fragment>
   );
