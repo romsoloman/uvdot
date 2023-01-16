@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <Section
       style={{
-        backgroundImage: `url("/assets/images/header/background-1.jpg")`,
+        backgroundImage: `url("/assets/icons/header/background-1.jpg")`,
       }}
     >
       <Container maxWidth="md">
