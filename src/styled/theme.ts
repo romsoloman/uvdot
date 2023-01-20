@@ -21,8 +21,8 @@ const theme = createTheme({
       main: "#ff6666",
     },
     background: {
-      default: grey[300],
-      paper: "#fff",
+      default: grey[400],
+      paper: grey[300],
     },
   },
 });
